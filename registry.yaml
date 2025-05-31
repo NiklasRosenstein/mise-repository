@@ -1,0 +1,13 @@
+packages:
+  - name: headscale
+    type: github_release
+    repo_owner: juanfont
+    repo_name: headscale
+    asset: headscale_{{ .Version }}_linux_{{ .Arch }}
+    description: Headscale is an open-source implementation of the Tailscale control plane server.
+    replacements:
+      arm64: aarch64
+    checksum:
+      type: github_release
+      asset: checksums.txt
+      algorithm: sha256
